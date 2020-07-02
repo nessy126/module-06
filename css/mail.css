@@ -520,6 +520,15 @@ footer {
 .is-hidden-temp {
   opacity: 0;
   pointer-events: none;
+  -webkit-transition: -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden-temp .modal {
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .feature-list {
@@ -827,6 +836,8 @@ ul .feature.list {
   left: 0;
   background: rgba(0, 0, 0, 0.2);
   z-index: 4;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -853,6 +864,12 @@ ul .feature.list {
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 .modal-title {
@@ -929,17 +946,20 @@ ul .feature.list {
   color: #2196f3;
   font-size: 12px;
   line-height: 1.16666;
-  -webkit-transition: -webkit-transform 0.25s linear;
-  transition: -webkit-transform 0.25s linear;
-  transition: transform 0.25s linear;
-  transition: transform 0.25s linear, -webkit-transform 0.25s linear;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus ~ .form-icon,
 .form-input:not(:placeholder-shown) ~ .form-icon {
   fill: #2196f3;
-  -webkit-transition: 0.25s linear;
-  transition: 0.25s linear;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+  border: 1px solid #2196F3;
+  border-radius: 4px;
 }
 
 /* Иконки */
