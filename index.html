@@ -10,7 +10,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"/>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mail.min.css" />
   </head>
   <body>
     <header class="section no-padding page-header">
@@ -65,7 +65,7 @@
       <!--Преимущества-->
       <section class="feature-section section">
         <div class="container">
-          <h2 class="section-title is-hidden">Наши преимущества</h2>
+          <h2 class="section-title visually-hidden">Наши преимущества</h2>
           <ul class="feature list feature-list">
             <li class="item icon-antenna-1">
               <h3 class="title feature">Внимание к деталям</h3>
@@ -400,8 +400,7 @@
               <a
                 href="https://www.instagram.com/"
                 aria-label="Ссылка на Инстаграм"
-                class="social-link"
-              >
+                class="social-link">
                 <svg class="social-icon">
                   <use
                     href="./images/social/team-social/social-sprite.svg#icon-instagram"
@@ -451,11 +450,10 @@
     </footer>
     <div class="backdrop is-hidden-temp" data-backdrop>
       <div class="modal">
-        <button class="close"data-close-modal>
+        <button class="close" data-close-modal>
           <svg width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z"
-             />
+              d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z"/>
           </svg>
         </button>
         <p>Оставьте свои данные, мы вам перезвоним</p>
@@ -469,7 +467,7 @@
               </svg>
           </div>
           <div class="form-field">
-            <input name="" type="tel" id="tel" class="form-item form-input" placeholder=" " />
+            <input name="tel" type="tel" id="tel" class="form-item form-input" placeholder=" " />
             <label for="tel" class="form-label">Телефон</label>
             <svg class="form-icon" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -491,10 +489,9 @@
             </label>
           </div> -->
           <label for="condition" class="check option">Соглашаюсь с рассылкой и принимаю <span class="check-link">Условия договора</span> 
-          <input name="" id="condition" name="condition" type="checkbox" value="confirm" class="check-input" />
+          <input name="condition" id="condition" type="checkbox" value="confirm" class="check-input" />
           <span class="check-box"></span>
           </label>
-        
         </form>
         <button class="button modal-btn" data-close-modal>Отправить</button>
       </div>

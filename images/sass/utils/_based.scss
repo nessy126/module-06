@@ -1,6 +1,5 @@
-
 body {
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.2;
@@ -30,7 +29,6 @@ a {
   padding: 94px 0;
 }
 
-
 /* Title */
 
 h1,
@@ -39,6 +37,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: 700;
 }

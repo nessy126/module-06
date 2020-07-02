@@ -12,8 +12,8 @@
   font-size: 14px;
   line-height: 1.1429;
   letter-spacing: 0.01em;
-  color: var(--primary-text-color);
-    transition: transform 25ms linear;
+  color: $primary-text-color;
+  transition: transform 25ms linear;
 }
 
 .form-input {
@@ -27,13 +27,19 @@
   font-size: 14px;
   line-height: 1.1429;
   letter-spacing: 0.01em;
-}
 
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  transform: translate(-26px, -44px);
-  color: var(--accent-color);
-  transition: transform 0.25s linear;
+  &:focus + .form-label,
+  &:not(:placeholder-shown) + .form-label {
+    transform: translate(-26px, -44px);
+    color: $accent-color;
+    transition: transform 0.25s linear;
+  }
+
+  &:focus ~ .form-icon,
+  &:not(:placeholder-shown) ~ .form-icon {
+    fill: $accent-color;
+    transition: 0.25s linear;
+  }
 }
 
 /* Иконки */
@@ -43,13 +49,7 @@
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  fill: var(--title-text-color);
-}
-
-.form-input:focus ~ .form-icon,
-.form-input:not(:placeholder-shown) ~ .form-icon {
-  fill: var(--accent-color);
-  transition:  0.25s linear;
+  fill: $title-text-color;
 }
 
 .form-textarea {
@@ -78,7 +78,7 @@
   letter-spacing: 0.03em;
   text-align: left;
   padding-left: 42px;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .check-input {
@@ -87,39 +87,39 @@
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+
+  &:checked + .check-box {
+    background-color: $accent-color;
+    background-image: url(../images/form/check.svg);
+    border: 2px solid $accent-color;
+    border-radius: 2px;
+  }
+
+  &:focus + .check-box {
+    border: 2px solid $accent-color;
+    border-radius: 2px;
+  }
+
+  &:checked:focus + .check-box {
+    background-color: $accent-color;
+    background-image: url(../images/form/check.svg);
+    border: 2px solid $accent-color;
+    border-radius: 2px;
+  }
 }
 
 .check-box {
   position: absolute;
   width: 16px;
   height: 15px;
-  border: 2px solid var(--title-text-color);
+  border: 2px solid $title-text-color;
   border-radius: 2px;
   left: 17.5px;
   top: 1px;
 }
 
-.check-input:checked + .check-box {
-  background-color: var(--accent-color);
-  background-image: url(../images/form/check.svg);
-  border: 2px solid var(--accent-color);
-  border-radius: 2px;
-}
-
-.check-input:focus + .check-box {
-   border: 2px solid var(--accent-color);
-  border-radius: 2px;
-}
-
-.check-input:checked:focus + .check-box {
-  background-color: var(--accent-color);
-  background-image: url(../images/form/check.svg);
-  border: 2px solid var(--accent-color);
-  border-radius: 2px;
-}
-
 .check-link {
-  color: var(--accent-color);
+  color: $accent-color;
   cursor: pointer;
   text-decoration: underline;
 }
