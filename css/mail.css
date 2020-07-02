@@ -883,9 +883,13 @@ ul .feature.list {
   background-color: #fff;
 }
 
-.form-field:not(:last-child) {
+.form-field {
   position: relative;
   margin-bottom: 28px;
+}
+
+.form-field:nth-child(4) {
+  margin-bottom: 20px;
 }
 
 .form-label {
@@ -952,7 +956,6 @@ ul .feature.list {
   padding: 12px 18px;
   width: 448px;
   height: 120px;
-  margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-weight: normal;
