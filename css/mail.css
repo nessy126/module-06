@@ -836,7 +836,8 @@ ul .feature.list {
   margin-top: auto;
   margin-bottom: auto;
   padding: 40px;
-  width: 528px;
+  width: 100%;
+  max-width: 528px;
   height: auto;
   left: 50%;
   top: 50%;
@@ -852,6 +853,10 @@ ul .feature.list {
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+
+.modal-title {
+  margin-bottom: 30px;
 }
 
 .form-modal {
@@ -878,7 +883,7 @@ ul .feature.list {
   background-color: #fff;
 }
 
-.form-field {
+.form-field:not(:last-child) {
   position: relative;
   margin-bottom: 28px;
 }
@@ -915,9 +920,11 @@ ul .feature.list {
 
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
-  -webkit-transform: translate(-26px, -44px);
-          transform: translate(-26px, -44px);
+  -webkit-transform: translate(-30px, -40px);
+          transform: translate(-30px, -40px);
   color: #2196f3;
+  font-size: 12px;
+  line-height: 1.16666;
   -webkit-transition: -webkit-transform 0.25s linear;
   transition: -webkit-transform 0.25s linear;
   transition: transform 0.25s linear;

@@ -1,4 +1,4 @@
-.form-field {
+.form-field:not(:last-child) {
   position: relative;
   margin-bottom: 28px;
 }
@@ -30,8 +30,10 @@
 
   &:focus + .form-label,
   &:not(:placeholder-shown) + .form-label {
-    transform: translate(-26px, -44px);
+    transform: translate(-30px, -40px);
     color: $accent-color;
+    font-size: 12px;
+    line-height: 1.16666;
     transition: transform 0.25s linear;
   }
 
