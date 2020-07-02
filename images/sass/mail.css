@@ -1,1 +1,14 @@
 /* No CSS *//*# sourceMappingURL=mail.css.map */
+
+@import "./utils/_based.scss";
+@import "./utils/_variables.scss";
+
+@import "components/_menu.scss";
+@import "../sass/components/_title.scss";
+@import "../sass/components/_buttons.scss";
+@import "../sass/components/_social.scss";
+
+
+@import "./layouts/_header.scss";
+@import "./layouts/_sections.scss";
+@import "./layouts/_conteiners.scss";
